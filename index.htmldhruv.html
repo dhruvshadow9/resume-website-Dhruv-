@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dhruv Singh | BBA-DBE, IIM Bangalore</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&family=Pinyon+Script&family=Anton&family=Caveat:wght@500;700&family=Special+Elite&family=Josefin+Sans:wght@300;400;600&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a1712;--gold:#e3b866;--ivory:#eef2e8;--mut:#a9b8ab;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',Arial,sans-serif;--script:'Pinyon Script',cursive}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ivory);font:300 1rem/1.75 var(--sans);overflow-x:hidden}
+h1,h2,h3,p,ul{margin:0}ul{padding:0;list-style:none}a{color:inherit}
+.w{position:relative;max-width:1040px;margin:0 auto;padding:0 22px}
+.lab{font:500 .7rem var(--sans);letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.ttl{font:600 clamp(2.4rem,8vw,4.2rem)/1.05 var(--serif);margin-bottom:28px}
+.ttl i{font-weight:500;color:var(--gold)}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes dr{to{stroke-dashoffset:0}}
+
+/* navigation */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s}
+nav.solid{background:rgba(7,16,12,.96);border-bottom:1px solid rgba(227,184,102,.35)}
+nav .w{display:flex;align-items:center;height:68px}
+.logo{display:flex;align-items:center;text-decoration:none;margin-right:auto}
+.mono{width:40px;height:40px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font:600 1.05rem var(--serif);color:var(--gold);margin-right:12px}
+.logo b{display:block;font:600 1.1rem/1.1 var(--serif)}
+.logo small{display:block;font-size:.6rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--mut)}
+nav ul{display:flex;align-items:center}
+nav ul li{margin-left:26px}
+nav ul a{text-decoration:none;font:400 .72rem var(--sans);letter-spacing:2px;text-transform:uppercase;color:#d6dfd2;padding:6px 0;border-bottom:1px solid transparent;transition:.25s}
+nav ul a:hover{border-bottom-color:var(--gold)}
+nav ul .cta{border:1px solid var(--gold);color:var(--gold);padding:8px 20px;border-radius:30px}
+nav ul .cta:hover{background:var(--gold);color:#111}
+.mb{display:none;background:none;border:1px solid rgba(255,255,255,.45);color:#fff;border-radius:6px;padding:6px 12px;font:500 .72rem var(--sans);letter-spacing:2px;text-transform:uppercase}
+@media(max-width:860px){
+  .mb{display:block}
+  nav ul{display:none;position:fixed;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;background:rgba(7,16,12,.98);padding:8px 22px 22px}
+  nav.open ul{display:flex}
+  nav ul li{margin:0}
+  nav ul a{display:block;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  nav ul .cta{margin-top:12px;text-align:center}
+}
+
+/* hero */
+.hero{position:relative;height:100vh;min-height:700px;overflow:hidden;background:linear-gradient(#0d2340 0%,#2a4f7a 34%,#d98a5b 66%,#f6c27a 86%)}
+#scene{position:absolute;left:0;top:0;width:100%;height:100%;z-index:1}
+.copy{position:absolute;left:0;right:0;top:96px;z-index:5}
+.copy .w>*{animation:up .9s both}
+.copy .w>*:nth-child(2){animation-delay:.1s}.copy .w>*:nth-child(3){animation-delay:.2s}.copy .w>*:nth-child(4){animation-delay:.3s}.copy .w>*:nth-child(5){animation-delay:.4s}
+.copy h1{font:600 clamp(3.4rem,14vw,7.6rem)/.92 var(--serif);color:#fff;text-shadow:0 3px 22px rgba(0,0,0,.4);margin:4px 0 18px}
+.copy h1 i{font-weight:500;color:#ffe2a6}
+.lead{font-size:clamp(1.05rem,3.6vw,1.5rem);line-height:1.45;max-width:640px;color:#f1f4ff;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.lead b{font-weight:500;color:#ffe2a6}
+.sub{max-width:560px;margin-top:12px;color:#e2e8f6;font-size:.92rem;text-shadow:0 2px 10px rgba(0,0,0,.4)}
+.btns{margin-top:22px}
+.btn{display:inline-block;margin:0 10px 10px 0;padding:12px 24px;border:1px solid #ffe2a6;color:#ffe2a6;background:rgba(8,18,14,.45);font:500 .72rem var(--sans);letter-spacing:2px;text-transform:uppercase;text-decoration:none;cursor:pointer;border-radius:30px}
+.btn.f{background:#ffe2a6;color:#111}
+.btn:hover{background:#fff;border-color:#fff;color:#111}
+
+/* sections */
+.sec{position:relative;padding:84px 0 76px;scroll-margin-top:68px;color:#16130a}
+.z{position:absolute;top:-1px;left:0;right:0;height:14px;z-index:2;background:linear-gradient(135deg,var(--p) 25%,transparent 25%) -14px 0,linear-gradient(225deg,var(--p) 25%,transparent 25%) -14px 0;background-size:28px 28px}
+.k{font:400 .76rem 'Special Elite','Courier New',monospace;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
+.h{font:400 clamp(2.8rem,11vw,5.4rem)/.95 'Anton',Impact,sans-serif;text-transform:uppercase;letter-spacing:1px;margin:0 0 26px}
+.sec p{line-height:1.75}
+.s1{background:radial-gradient(rgba(0,0,0,.16) 1.4px,transparent 1.7px) 0 0/16px 16px,#ffd84d}
+.two{display:flex;flex-wrap:wrap;margin:0 -16px}
+.two>div{flex:1 1 320px;margin:0 16px}
+.s1 p{margin:0 0 14px;font-size:1.02rem;font-weight:400}
+.tiles{display:flex;flex-wrap:wrap;margin:6px -8px 0}
+.t{flex:1 1 150px;margin:8px;padding:18px 14px;border:3px solid #16130a;box-shadow:6px 6px 0 #16130a;font-size:.82rem;line-height:1.4;font-weight:500}
+.t b{display:block;font:400 3rem/1 'Anton',sans-serif;margin-bottom:6px}
+.s2{background:linear-gradient(rgba(40,40,20,.07) 1px,transparent 1px) 0 0/30px 30px,linear-gradient(90deg,rgba(40,40,20,.07) 1px,transparent 1px) 0 0/30px 30px,#f6f1e6}
+.tl{border-left:3px solid #16130a;margin-left:9px;max-width:880px}
+.ti{--n:#ff5a3c;position:relative;display:flex;flex-wrap:wrap;align-items:baseline;padding:18px 14px 18px 30px;border-bottom:1px solid rgba(0,0,0,.14)}
+.ti::before{content:"";position:absolute;left:-12px;top:24px;width:18px;height:18px;border-radius:50%;background:#f6f1e6;border:4px solid var(--n)}
+.ti:nth-child(2){--n:#2f5bff}.ti:nth-child(3){--n:#14b8a6}.ti:nth-child(4){--n:#ff9a1f}.ti:nth-child(5){--n:#d63a8f}
+.ti>span{flex:0 0 150px;font:400 .72rem 'Special Elite',monospace;letter-spacing:1.5px;text-transform:uppercase;color:#555}
+.ti>div{flex:1 1 280px}
+.ti h3{font:400 1.45rem/1.15 'Anton',sans-serif;text-transform:uppercase;letter-spacing:.5px}
+.ti p{margin:2px 0 0;font-size:.92rem}
+.ti.m{background:#16130a;color:#fff}
+.ti.m>span{color:#ffd84d}
+.s3{background:repeating-linear-gradient(135deg,rgba(255,255,255,.13) 0 10px,transparent 10px 22px),#14b8a6}
+.notes{display:flex;flex-wrap:wrap;margin:0 -12px}
+.nt{position:relative;flex:1 1 250px;margin:16px 12px;padding:30px 20px 22px;box-shadow:5px 9px 0 rgba(0,0,0,.2);transform:rotate(var(--r,0deg))}
+.nt::before{content:"";position:absolute;top:-12px;left:50%;width:84px;height:24px;margin-left:-42px;background:rgba(255,255,255,.7);transform:rotate(-3deg)}
+.nt h3{font:400 1.35rem/1.15 'Anton',sans-serif;text-transform:uppercase;margin-bottom:6px}
+.nt p{margin:0;font:700 1.3rem/1.2 'Caveat',cursive}
+.nt b{display:block;font:400 4.6rem/1 'Anton',sans-serif}
+.nt:nth-child(1){background:#ffe45e;--r:-1.2deg;flex-basis:100%}
+.nt:nth-child(2){background:#ff9ecb;--r:1.5deg}.nt:nth-child(3){background:#fff;--r:-1deg}
+.nt:nth-child(4){background:#ffa94d;--r:2deg}.nt:nth-child(5){background:#cdb4ff;--r:-2deg}
+.nt:nth-child(6){background:#9bdcff;--r:1deg}.nt:nth-child(7){background:#c8f169;--r:-1.5deg}
+.s4{background:radial-gradient(rgba(255,255,255,.5) 2px,transparent 2.5px) 0 0/22px 22px,#ffb3d1}
+.pr{display:flex;flex-wrap:wrap;margin:0 -9px}
+.pb{flex:1 1 260px;margin:9px;padding:20px;background:#fff;border:3px solid #16130a;box-shadow:6px 6px 0 #16130a}
+.pb h3{font:400 1.6rem 'Anton',sans-serif;text-transform:uppercase;margin-bottom:8px}
+.pb p{margin:0;font-size:.95rem}
+.pb .po span{display:inline-block;margin:0 12px 0 0;font:400 1.8rem/1.25 'Pinyon Script',cursive}
+.s5{background:linear-gradient(rgba(255,255,255,.13) 1px,transparent 1px) 0 0/36px 36px,linear-gradient(90deg,rgba(255,255,255,.13) 1px,transparent 1px) 0 0/36px 36px,#2f5bff;color:#fff}
+.sk{display:flex;flex-wrap:wrap;margin:0 -12px}
+.sk>div{flex:1 1 250px;margin:12px}
+.sk h3{font:400 .8rem 'Special Elite',monospace;letter-spacing:2px;text-transform:uppercase;color:#ffe45e;margin-bottom:12px}
+.sk h3::before{content:"// "}
+.sk span{display:inline-block;margin:0 8px 10px 0;padding:7px 16px;border-radius:30px;background:#fff;color:#16130a;font-size:.88rem;font-weight:500;box-shadow:3px 3px 0 #16130a}
+.s6{background:repeating-linear-gradient(90deg,rgba(0,0,0,.06) 0 2px,transparent 2px 14px),#c8f169}
+.gl>div{display:flex;align-items:center;padding:20px 0;border-bottom:3px solid #16130a}
+.gl>div:first-child{border-top:3px solid #16130a}
+.gl b{flex:0 0 92px;font:400 3.6rem/1 'Anton',sans-serif}
+.gl h3{font:400 clamp(1.5rem,5vw,2.4rem)/1.15 'Anton',sans-serif;text-transform:uppercase}
+.gl p{margin:0;font-size:.95rem}
+.s7{background:radial-gradient(rgba(0,0,0,.14) 1.4px,transparent 1.7px) 0 0/16px 16px,#ff7a2f}
+.ml{display:block;font:400 clamp(1.7rem,8vw,4rem)/1.1 'Anton',sans-serif;color:#16130a;text-decoration:none;word-break:break-all;border-bottom:5px solid #16130a;padding-bottom:6px;margin:6px 0 24px}
+.mt{display:flex;flex-wrap:wrap;margin:0 -10px}
+.mt div{flex:1 1 200px;margin:0 10px 14px;font-weight:500}
+.mt b{display:block;font:400 .72rem 'Special Elite',monospace;letter-spacing:2px;text-transform:uppercase}
+footer{background:#16130a;color:#c9c4b4;text-align:center;font-size:.76rem;padding:18px 16px}
+.pw{flex-basis:100%}
+.pw p{margin:0 0 8px}
+
+/* my story: scrapbook style */
+.s1{background:radial-gradient(rgba(95,11,21,.07) 1.2px,transparent 1.6px) 0 0/18px 18px,#d4cec4;color:#2b1a18}
+.s1 .k{color:#5F0B15}
+.s1 .h{font:300 clamp(2.2rem,8vw,3.6rem)/1.05 'Josefin Sans',sans-serif;color:#5F0B15;letter-spacing:3px;margin-bottom:10px}
+.ab{font:400 2rem/1 'Pinyon Script',cursive;color:#5F0B15;margin:0 0 6px}
+.nb{position:relative;max-width:580px;margin:44px auto 34px;padding:44px 20px 26px;text-align:center;background:repeating-linear-gradient(#f1f3ea 0 27px,rgba(95,11,21,.13) 27px 28px);box-shadow:0 12px 26px rgba(0,0,0,.28);transform:rotate(-1deg)}
+.nb::before{content:"";position:absolute;top:-16px;left:18px;right:18px;height:32px;border-radius:5px;background:repeating-linear-gradient(90deg,#b98a22 0 7px,transparent 7px 26px)}
+.meet{font:300 clamp(1.4rem,6vw,2.1rem)/1.2 'Josefin Sans',sans-serif;color:#5F0B15;text-transform:uppercase;letter-spacing:1px;margin:0 0 12px}
+.rn{display:block;line-height:1.5}
+.rn i{display:inline-block;font-style:normal;padding:.02em .16em;margin:2px 1px;font-size:clamp(1.9rem,9vw,3rem);line-height:1.12;box-shadow:1px 3px 0 rgba(0,0,0,.25)}
+.rn .gap{display:inline-block;width:.7em;box-shadow:none}
+.r1{background:#3b3431;color:#e8d9c0;font-family:'Anton',sans-serif;transform:rotate(-4deg)}
+.r2{background:#e9a07a;color:#7a1b1b;font-family:'Special Elite',monospace;transform:rotate(3deg)}
+.r3{background:#e3b23c;color:#3b3431;font-family:'Cormorant Garamond',serif;font-weight:700;transform:rotate(-2deg)}
+.r4{background:#efe3cf;color:#5a7aa8;font-family:'Pinyon Script',cursive;transform:rotate(4deg)}
+.r5{background:#5b7bb5;color:#efe3cf;font-family:'Josefin Sans',sans-serif;font-weight:600;transform:rotate(-3deg)}
+.r6{background:#c9af93;color:#3b3431;font-family:'Caveat',cursive;font-weight:700;transform:rotate(2deg)}
+.torn{position:relative;max-width:600px;margin:0 auto 46px;padding:28px 32px;background:#f6f4ee;border-radius:6px 34px 8px 42px;box-shadow:0 8px 20px rgba(0,0,0,.18);transform:rotate(1.2deg);text-align:center}
+.s1 .hand{margin:0;font:400 1.2rem/1.7 'Shadows Into Light Two',cursive;text-transform:uppercase;letter-spacing:.5px;color:#3b2a28}
+.chs{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:34px 26px}
+.ch{position:relative;padding:34px 24px 26px;background:#f6f4ee;box-shadow:5px 7px 0 rgba(95,11,21,.25);transform:rotate(var(--r,0deg))}
+.ch::before{content:"";position:absolute;top:-12px;left:50%;width:84px;height:24px;margin-left:-42px;background:rgba(201,175,147,.75);transform:rotate(-3deg)}
+.ch:nth-child(odd){--r:-.8deg}.ch:nth-child(even){--r:.9deg}
+.ch .no{display:block;font:400 2.4rem/1 'Pinyon Script',cursive;color:#5F0B15}
+.s1 .ch h3{font:600 1.1rem/1.3 'Josefin Sans',sans-serif;text-transform:uppercase;letter-spacing:2.5px;color:#5F0B15;margin:2px 0 10px}
+.s1 .ch p{margin:0;font:400 .98rem/1.85 'Josefin Sans',sans-serif;color:#2b1a18}
+.s1 .tiles{margin-top:44px}
+.s1 .t{border-color:#5F0B15;box-shadow:6px 6px 0 #5F0B15;font-family:'Josefin Sans',sans-serif;color:#2b1a18}
+.s1 .t b{font-family:'Josefin Sans',sans-serif;font-weight:600;color:#5F0B15}
+@media(max-width:700px){.hero{min-height:780px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+@media print{nav,.btns,#scene{display:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="w">
+  <a class="logo" href="#top"><span class="mono">DS</span><span><b>Dhruv Singh</b><small>BBA-DBE · IIM Bangalore</small></span></a>
+  <button class="mb" id="mb" type="button">Menu</button>
+  <ul>
+    <li><a href="#summary">My story</a></li><li><a href="#credentials">Credentials</a></li><li><a href="#distinctions">Distinctions</a></li><li><a href="#interests">Interests</a></li><li><a href="#skills">Skills</a></li><li><a href="#goals">Goals</a></li><li><a class="cta" href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero" id="top">
+  <canvas id="scene"></canvas>
+  <div class="copy"><div class="w">
+    <div class="lab" style="color:#ffe2a6">BBA-DBE · IIM Bangalore</div>
+    <h1>Dhruv <i>Singh</i></h1>
+    <p class="lead">I am a scholar of the <b>Indian Institute of Management Bangalore</b>, rooted in Udhampur and animated by an abiding commitment to <b>finance</b>, <b>business strategy</b> and <b>digital enterprise</b>.</p>
+    <p class="sub">Alongside, I am reading for a B.Com (Honours) at Dayal Singh College, University of Delhi, and preparing as a CA aspirant, pairing rigorous scholarship with a quiet resolve to forge a distinguished career in business leadership.</p>
+    <div class="btns"><a class="btn f" href="mailto:dhruvshadow9@gmail.com">Get in touch</a><button class="btn" type="button" onclick="window.print()">Download as PDF</button></div>
+  </div></div>
+</header>
+
+<section class="sec s1" id="summary" style="--p:#12291b"><div class="z"></div><div class="w">
+  <div class="k">01 &middot; About me</div><div class="ab">about me</div><h2 class="h">My story</h2>
+  <div class="nb"><p class="meet">Nice to meet you!<br>I am</p><div class="rn"><i class="r1">D</i><i class="r2">H</i><i class="r3">R</i><i class="r4">U</i><i class="r5">V</i><i class="gap"></i><i class="r6">S</i><i class="r1">I</i><i class="r2">N</i><i class="r3">G</i><i class="r4">H</i></div></div>
+  <div class="torn"><p class="hand">Finance, strategy and service: the three threads that run through my story.</p></div>
+  <div class="chs"><article class="ch"><span class="no">I</span><h3>Roots in Udhampur</h3><p>I hail from Udhampur in Jammu &amp; Kashmir, where I completed my schooling at Army Public School and secured 80% in Class XII. Alongside my studies, the National Cadet Corps instilled in me a lasting sense of discipline, and I was awarded its &ldquo;A&rdquo; Certificate.</p></article><article class="ch"><span class="no">II</span><h3>Scholarship in two arenas</h3><p>Today I am a first-year student of the Bachelor of Business Administration in Digital Business and Entrepreneurship at the Indian Institute of Management Bangalore. In parallel, I am reading for a B.Com (Honours) at Dayal Singh College, University of Delhi, and I am a CA aspirant, charting my course towards Chartered Accountancy.</p></article><article class="ch"><span class="no">III</span><h3>Service and the open trail</h3><p>I lead an animal welfare club in my area society, which has extended rescue, medication and care to more than thirty animals, and I am a member of the Animal Welfare Society at Dayal Singh College. Beyond service, I have completed an 11 km trek at Shiv Ghatti, taught children in a voluntary capacity and taken part in the IIM Bangalore Case Competition.</p></article><article class="ch"><span class="no">IV</span><h3>The written word</h3><p>Poetry, English calligraphy, music composition and songwriting nourish the quieter side of my character. Faiz Ahmed Faiz, Ahmed Faraz, Parveen Shakir and Zia Mohyeddin are among the voices I return to most.</p></article><article class="ch"><span class="no">V</span><h3>The road ahead</h3><p>I aspire to attain true mastery of finance and management, to gain substantive professional experience, and ultimately to pursue advanced study in management, with financial analysis, business strategy, consulting, digital marketing and data analytics as the disciplines that draw me most.</p></article></div>
+  <div class="tiles">
+    <div class="t" style="background:#f6f4ee"><b>30+</b>animals aided through rescue, medication and care</div>
+    <div class="t" style="background:#c9af93"><b>NCC A</b>certificate, National Cadet Corps</div>
+    <div class="t" style="background:#a4a492"><b>11 km</b>Shiv Ghatti trek completed</div>
+  </div>
+</div></section>
+
+<section class="sec s2" id="credentials" style="--p:#ffd84d"><div class="z"></div><div class="w">
+  <div class="k">02 · Credentials</div><h2 class="h">Academic credentials</h2>
+  <div class="tl">
+    <div class="ti m"><span>Main programme</span><div><h3>Bachelor of Business Administration, Digital Business &amp; Entrepreneurship</h3><p>Indian Institute of Management Bangalore · first year</p></div></div>
+    <div class="ti"><span>Concurrent</span><div><h3>Bachelor of Commerce (Honours)</h3><p>Dayal Singh College, University of Delhi · first year</p></div></div>
+    <div class="ti"><span>Aspiration</span><div><h3>CA Aspirant</h3><p>Pursuing the Chartered Accountancy qualification</p></div></div>
+    <div class="ti"><span>Class XII</span><div><h3>Senior Secondary · 80%</h3><p>Army Public School, Udhampur</p></div></div>
+    <div class="ti"><span>Class X</span><div><h3>Secondary · 67%</h3><p>Secondary school examination</p></div></div>
+  </div>
+</div></section>
+
+<section class="sec s3" id="distinctions" style="--p:#f6f1e6"><div class="z"></div><div class="w">
+  <div class="k">03 · Distinctions</div><h2 class="h">Distinctions &amp; service</h2>
+  <div class="notes">
+    <div class="nt"><b>30+</b><h3>Animal welfare club</h3><p>Spearheads an animal welfare club in the area society, which has extended rescue, medication and care to more than 30 animals.</p></div>
+    <div class="nt"><h3>IIM Bangalore Case Competition</h3><p>Participant in the institute's case competition.</p></div>
+    <div class="nt"><h3>NCC "A" Certificate</h3><p>Awarded the NCC "A" Certificate through the National Cadet Corps.</p></div>
+    <div class="nt"><h3>Shiv Ghatti Trek</h3><p>Completed an 11 km trek at Shiv Ghatti, Jammu and Kashmir.</p></div>
+    <div class="nt"><h3>Animal Welfare Society</h3><p>Member of the Animal Welfare Society, Dayal Singh College, University of Delhi.</p></div>
+    <div class="nt"><h3>Volunteer educator</h3><p>Taught children in a voluntary capacity.</p></div>
+    <div class="nt"><h3>Academic project</h3><p>Financial Statement and Business Performance: an examination of how enterprises appraise their financial position.</p></div>
+  </div>
+</div></section>
+
+<section class="sec s4" id="interests" style="--p:#14b8a6"><div class="z"></div><div class="w">
+  <div class="k">04 · Interests</div><h2 class="h">Beyond the classroom</h2>
+  <div class="pr">
+    <div class="pb pw"><h3>Poetry</h3><p>A devoted admirer of poetry. Favourite poets:</p><p class="po"><span>Zia Mohyeddin</span><span>Faiz Ahmed Faiz</span><span>Ahmed Faraz</span><span>Parveen Shakir</span></p></div>
+    <div class="pb"><h3>Calligraphy</h3><p>Practitioner of English calligraphy.</p></div>
+    <div class="pb"><h3>Further pursuits</h3><p>Music composition and songwriting, reading, philosophy and spirituality, fitness and running, and travel.</p></div>
+  </div>
+</div></section>
+
+<section class="sec s5" id="skills" style="--p:#ffb3d1"><div class="z"></div><div class="w">
+  <div class="k">05 · Skills</div><h2 class="h">Skills &amp; tools</h2>
+  <div class="sk">
+    <div><h3>Content &amp; communication</h3><span>Content writing</span><span>Strong command of English</span><span>Social media content</span><span>Content management</span></div>
+    <div><h3>Creative</h3><span>English calligraphy</span><span>Photography</span><span>Videography</span><span>Music composition</span><span>Songwriting</span><span>Basic AI prompting</span></div>
+    <div><h3>Business &amp; analytical</h3><span>Excel</span><span>Business tools</span><span>Financial analysis</span><span>Business strategy</span><span>Consulting</span><span>Digital marketing</span><span>Data analytics</span></div>
+  </div>
+</div></section>
+
+<section class="sec s6" id="goals" style="--p:#2f5bff"><div class="z"></div><div class="w">
+  <div class="k">06 · Goals</div><h2 class="h">Where the work leads</h2>
+  <div class="gl">
+    <div><b>01</b><div><h3>Mastery of finance and management</h3><p>Cultivating deep command of both disciplines.</p></div></div>
+    <div><b>02</b><div><h3>Substantive professional experience</h3><p>Seeking meaningful, hands-on exposure in the field.</p></div></div>
+    <div><b>03</b><div><h3>Advanced study in management</h3><p>Pursuing higher education in management.</p></div></div>
+  </div>
+</div></section>
+
+<section class="sec s7" id="contact" style="--p:#c8f169"><div class="z"></div><div class="w">
+  <div class="k">07 · Correspondence</div><h2 class="h">Get in touch</h2>
+  <a class="ml" href="mailto:dhruvshadow9@gmail.com">dhruvshadow9@gmail.com</a>
+  <div class="mt"><div><b>Based in</b>Delhi, India</div><div><b>Native of</b>Udhampur, Jammu &amp; Kashmir</div><div><b>Languages</b>Hindi, English</div></div>
+</div></section>
+<footer>© 2026 Dhruv Singh</footer>
+
+
+<script>
+/* navigation */
+(function(){
+  var nav=document.getElementById('nav');
+  function s(){nav.className=(window.pageYOffset>40?'solid ':'')+(nav.className.indexOf('open')>-1?'open':'')}
+  window.addEventListener('scroll',s);s();
+  document.getElementById('mb').onclick=function(){nav.classList.toggle('open')};
+  var a=document.querySelectorAll('nav ul a');
+  for(var i=0;i<a.length;i++)a[i].onclick=function(){nav.classList.remove('open')};
+})();
+
+/* animated valley scene: one canvas, drawn at about 30 frames per second */
+(function(){
+  try{
+    var cv=document.getElementById('scene'),ctx=cv.getContext('2d'),hero=document.getElementById('top');
+    var W,H,dpr,S,land,blades=[],house={},last=0,t0=Date.now(),rt;
+    function rnd(a,b){return a+Math.random()*(b-a)}
+    function ridge(c,top,hgt,pts,stops,alpha){
+      var g=c.createLinearGradient(0,top,0,top+hgt),i;
+      for(i=0;i<stops.length;i++)g.addColorStop(stops[i][0],stops[i][1]);
+      c.globalAlpha=alpha||1;c.fillStyle=g;c.beginPath();
+      for(i=0;i<pts.length;i++){var x=-W*.06+pts[i][0]/100*W*1.12,y=top+pts[i][1]/100*hgt;if(i)c.lineTo(x,y);else c.moveTo(x,y)}
+      c.closePath();c.fill();c.globalAlpha=1;
+    }
+    function hillY(x){var d=(x-W*.5)/(W*.7);return H-H*.31*Math.sqrt(Math.max(0,1-d*d))}
+    function mk(n,min,max,l,amp){
+      var a=[],i;
+      for(i=0;i<n;i++)a.push({x:i/n*W+rnd(-6,6),h:rnd(min,max)*S,w:rnd(3,7)*S,ph:rnd(0,6.28),sp:rnd(.8,1.6),amp:amp,c:'hsl('+Math.round(rnd(85,120))+',55%,'+Math.round(l+rnd(-4,10))+'%)'});
+      return a;
+    }
+    function build(){
+      W=hero.clientWidth;H=hero.clientHeight;dpr=Math.min(window.devicePixelRatio||1,1.5);
+      cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);
+      S=Math.max(.75,Math.min(1.35,W/820));
+      land=document.createElement('canvas');land.width=cv.width;land.height=cv.height;
+      var c=land.getContext('2d');c.scale(dpr,dpr);
+      ridge(c,H*.35,H*.36,[[0,100],[0,62],[10,34],[18,56],[30,18],[42,54],[54,28],[66,58],[78,14],[90,50],[100,36],[100,100]],[[0,'#ffffff'],[.1,'#cfc9e6'],[.36,'#8b86b6'],[1,'#6a6a9a']],.8);
+      ridge(c,H*.47,H*.30,[[0,100],[0,56],[14,30],[26,60],[40,22],[52,58],[68,26],[82,62],[92,40],[100,58],[100,100]],[[0,'#f2eefa'],[.12,'#a59fcc'],[.42,'#5b5b8c'],[1,'#3f4a72']]);
+      var g=c.createLinearGradient(0,H*.65,0,H*.79);
+      g.addColorStop(0,'rgba(255,214,160,0)');g.addColorStop(.5,'rgba(255,214,160,.5)');g.addColorStop(1,'rgba(255,214,160,0)');
+      c.fillStyle=g;c.fillRect(0,H*.65,W,H*.14);
+      g=c.createLinearGradient(0,H*.69,0,H);g.addColorStop(0,'#3d7a45');g.addColorStop(1,'#173524');
+      c.fillStyle=g;c.beginPath();c.ellipse(W*.5,H,W*.7,H*.31,0,Math.PI,Math.PI*2);c.fill();
+      /* home */
+      var hx=W*(W<700?.5:.6),hy=hillY(hx+37*S)+3;
+      c.save();c.translate(hx,hy);c.scale(S,S);
+      c.fillStyle='#5a2420';c.fillRect(52,-64,9,26);
+      c.fillStyle='#e8c9a0';c.fillRect(0,-36,74,36);
+      c.fillStyle='rgba(0,0,0,.14)';c.fillRect(64,-36,10,36);
+      c.fillStyle='#7a2f2a';c.beginPath();c.moveTo(-6,-34);c.lineTo(37,-64);c.lineTo(80,-34);c.closePath();c.fill();
+      c.fillStyle='#5b3a22';c.fillRect(14,-20,12,20);
+      c.shadowColor='rgba(255,200,90,.9)';c.shadowBlur=14;c.fillStyle='#ffd36e';c.fillRect(44,-26,14,14);
+      c.restore();
+      house.x=hx+56*S;house.y=hy-66*S;
+      /* pines */
+      var p=[[.54,1],[.75,1.3],[.71,.8]],i,t;
+      c.fillStyle='#123022';
+      for(i=0;i<p.length;i++){
+        var x=W*p[i][0],by=hillY(x)+2,w=30*p[i][1]*S,h=66*p[i][1]*S;
+        for(t=0;t<3;t++){var top=by-h+t*h*.26,hw=w*(.32+t*.14);c.beginPath();c.moveTo(x,top);c.lineTo(x+hw,top+h*.42);c.lineTo(x-hw,top+h*.42);c.closePath();c.fill()}
+        c.fillRect(x-2*S,by-h*.12,4*S,h*.12);
+      }
+      c.fillStyle='#10291b';c.beginPath();c.ellipse(W*.15,H,W*.55,H*.2,0,Math.PI,Math.PI*2);c.fill();
+      blades=[mk(Math.round(W/6),34,80,34,.3),mk(Math.round(W/9),56,125,22,.38)];
+    }
+    function sun(t){
+      var x=W*.84,y=H*.43,r=40*S,p=1+Math.sin(t*1.1)*.06,i;
+      var g=ctx.createRadialGradient(x,y,r*.6,x,y,r*5*p);
+      g.addColorStop(0,'rgba(255,200,110,.75)');g.addColorStop(.35,'rgba(255,160,80,.28)');g.addColorStop(1,'rgba(255,140,70,0)');
+      ctx.fillStyle=g;ctx.fillRect(x-r*5.5,y-r*5.5,r*11,r*11);
+      ctx.save();ctx.translate(x,y);ctx.rotate(t*.04);ctx.fillStyle='rgba(255,230,160,.15)';
+      for(i=0;i<14;i++){ctx.rotate(Math.PI*2/14);ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(r*6,-r*.35);ctx.lineTo(r*6,r*.35);ctx.closePath();ctx.fill()}
+      ctx.restore();
+      g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,'#fff8d8');g.addColorStop(.55,'#ffd27a');g.addColorStop(1,'#ff9f43');
+      ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,6.2832);ctx.fill();
+    }
+    var CL=[[.2,1,12,0],[.3,.8,8,.5],[.15,1.1,6,.25]],BD=[[.34,55,0],[.38,44,.3],[.31,36,.6]];
+    function clouds(t){
+      ctx.fillStyle='rgba(255,255,255,.55)';
+      for(var i=0;i<CL.length;i++){
+        var c=CL[i],s=c[1]*S,x=((t*c[2]+c[3]*(W+400))%(W+400))-200,y=H*c[0];
+        ctx.beginPath();ctx.arc(x,y,22*s,0,6.2832);ctx.arc(x+30*s,y-14*s,28*s,0,6.2832);ctx.arc(x+64*s,y-6*s,20*s,0,6.2832);ctx.arc(x+90*s,y+2*s,16*s,0,6.2832);ctx.arc(x+40*s,y+6*s,22*s,0,6.2832);ctx.fill();
+      }
+    }
+    function birds(t){
+      ctx.strokeStyle='#1b1b2f';ctx.lineWidth=1.8;
+      for(var i=0;i<BD.length;i++){
+        var b=BD[i],x=((t*b[1]+b[2]*(W+200))%(W+200))-60,y=H*b[0]+Math.sin(t*1.3+b[2]*9)*14,wg=Math.sin(t*9+b[2]*5)*5*S;
+        ctx.beginPath();ctx.moveTo(x-9*S,y-wg);ctx.lineTo(x,y);ctx.lineTo(x+9*S,y-wg);ctx.stroke();
+      }
+    }
+    function smoke(t){
+      for(var k=0;k<6;k++){
+        var p=(t*.22+k/6)%1;
+        ctx.fillStyle='rgba(255,255,255,'+((1-p)*.65).toFixed(2)+')';
+        ctx.beginPath();ctx.arc(house.x+p*28*S+Math.sin(p*7+k)*3*S,house.y-p*80*S,(3+p*13)*S,0,6.2832);ctx.fill();
+      }
+    }
+    function grass(t){
+      for(var L=0;L<2;L++){
+        var a=blades[L];
+        for(var i=0;i<a.length;i++){
+          var b=a[i],x=b.x,sw=(Math.sin(t*b.sp+x*.012+b.ph)*.5+Math.sin(t*.45+x*.004)*.9)*b.amp;
+          ctx.fillStyle=b.c;ctx.beginPath();ctx.moveTo(x-b.w,H+2);
+          ctx.quadraticCurveTo(x-b.w*.3+sw*b.h*.25,H-b.h*.55,x+sw*b.h*.55,H-b.h);
+          ctx.quadraticCurveTo(x+b.w*.3+sw*b.h*.25,H-b.h*.55,x+b.w,H+2);ctx.fill();
+        }
+      }
+    }
+    function frame(ts){
+      requestAnimationFrame(frame);
+      if(ts-last<33)return;last=ts;
+      if((window.pageYOffset||0)>H)return;
+      var t=(Date.now()-t0)/1000;
+      ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
+      sun(t);clouds(t);birds(t);
+      ctx.drawImage(land,0,0,W,H);
+      smoke(t);grass(t);
+    }
+    build();requestAnimationFrame(frame);
+    window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(build,250)});
+  }catch(e){}
+})();
+
+</script>
+</body>
+</html>
